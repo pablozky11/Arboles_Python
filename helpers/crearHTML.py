@@ -1,6 +1,16 @@
+import pandas as pd
+from bs4 import BeautifulSoup
+def crearTabla(dataframe,nombre):
+
+    archivoHTML=dataframe.to_html()
+    rutaArchivo=f"tables/{nombre}.html"
+
+    encabezado=''' 
+ 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+        <base href="../">
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <meta name="description" content="POS - Bootstrap Admin Template">
@@ -83,7 +93,7 @@
 									<li><a href="analizarDatos.html"><i data-feather="codepen"></i><span>Analizar Datos</span></a></li>
 								</ul>
 							</li>
-							<li class="submenu-open">
+                            <li class="submenu-open">
 								<h6 class="submenu-hdr">Lista Arboles</h6>
 								<ul>
 									<a href="tables/arboles.html" ><i data-feather="grid"></i><span>Lista Arboles</span></a>
@@ -124,70 +134,22 @@
 						<div class="card-body">
 							<h4 class="card-title">Tipo de Arboles</h4>
 							<div class="table-responsive dataview">
-								<table class="table datatable ">
-									<thead>
-										<tr>
-											<th>ID</th>
-											<th>Nombres de Arboles</th>
-											<th>Precio</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td class="productimgname">
-												<a class="product-img" href="productlist.html">
-													<img src="assets/img/product/product2.jpg" alt="product">
-												</a>
-												<a href="productlist.html">Orange</a>
-											</td>
-											<td>N/D</td>
+		
 
-										</tr>
-										<tr>
-											<td>2</td>
-											<td class="productimgname">
-												<a class="product-img" href="productlist.html">
-													<img src="assets/img/product/product3.jpg" alt="product">
-												</a>
-												<a href="productlist.html">Pineapple</a>
-											</td>
-											<td>N/D</td>
 
-										</tr>
-										<tr>
-											<td>3</td>
-											<td class="productimgname">
-												<a class="product-img" href="productlist.html">
-													<img src="assets/img/product/product4.jpg" alt="product">
-												</a>
-												<a href="productlist.html">Stawberry</a>
-											</td>
-											<td>N/D</td>
+        '''
 
-										</tr>
-										<tr>
-											<td>4</td>
-											<td class="productimgname">
-												<a class="product-img" href="productlist.html">
-													<img src="assets/img/product/product5.jpg" alt="product">
-												</a>
-												<a href="productlist.html">Avocat</a>
-											</td>
-											<td>N/D</td>
+    scripts=''' 
 
-										</tr>
-									</tbody>
-								</table>
-							</div>
+             		</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- /Main Wrapper -->
-		
-		<!-- jQuery -->
+ 
+
+             		<!-- jQuery -->
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
 
 		<!-- Feather Icon JS -->
@@ -210,5 +172,20 @@
 		<!-- Custom JS -->
 		<script src="assets/js/script.js"></script>
 		
-	</body>
+  
+        
+</body>
 </html>
+  
+        '''
+    
+    sopa=BeautifulSoup(archivoHTML,'html.parser')
+
+    for tr in sopa.find_all('tr'):
+        tr.attrs.pop('style',None)
+
+    archivoHTML=str(sopa) 
+    archivoHTML=archivoHTML.replace('<table border="1" class="dataframe">','<table class="table table-striped">')
+
+    with open(rutaArchivo,"w") as archivo:
+        archivo.write(f"{encabezado}\n{archivoHTML}\n{scripts}")
