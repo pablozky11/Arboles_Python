@@ -1,6 +1,9 @@
+ 
+ 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+        <base href="../">
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <meta name="description" content="POS - Bootstrap Admin Template">
@@ -83,7 +86,7 @@
 									<li><a href="analizarDatos.html"><i data-feather="codepen"></i><span>Analizar Datos</span></a></li>
 								</ul>
 							</li>
-							<li class="submenu-open">
+                            <li class="submenu-open">
 								<h6 class="submenu-hdr">Lista Arboles</h6>
 								<ul>
 									<a href="tables/arboles.html" ><i data-feather="grid"></i><span>Lista Arboles</span></a>
@@ -124,70 +127,333 @@
 						<div class="card-body">
 							<h4 class="card-title">Tipo de Arboles</h4>
 							<div class="table-responsive dataview">
-								<table class="table datatable ">
-									<thead>
-										<tr>
-											<th>ID</th>
-											<th>Nombres de Arboles</th>
-											<th>Precio</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td class="productimgname">
-												<a class="product-img" href="productlist.html">
-													<img src="assets/img/product/product2.jpg" alt="product">
-												</a>
-												<a href="productlist.html">Orange</a>
-											</td>
-											<td>N/D</td>
+		
 
-										</tr>
-										<tr>
-											<td>2</td>
-											<td class="productimgname">
-												<a class="product-img" href="productlist.html">
-													<img src="assets/img/product/product3.jpg" alt="product">
-												</a>
-												<a href="productlist.html">Pineapple</a>
-											</td>
-											<td>N/D</td>
 
-										</tr>
-										<tr>
-											<td>3</td>
-											<td class="productimgname">
-												<a class="product-img" href="productlist.html">
-													<img src="assets/img/product/product4.jpg" alt="product">
-												</a>
-												<a href="productlist.html">Stawberry</a>
-											</td>
-											<td>N/D</td>
+        
+<table class="table table-striped">
+<thead>
+<tr>
+<th></th>
+<th>id_arbol</th>
+<th>Nombre</th>
+<th>Precio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>726</td>
+<td>Laurel</td>
+<td>70074</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2290</td>
+<td>Laurel</td>
+<td>97157</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2369</td>
+<td>Caova</td>
+<td>91468</td>
+</tr>
+<tr>
+<th>3</th>
+<td>445</td>
+<td>Quina</td>
+<td>4326</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2352</td>
+<td>Quina</td>
+<td>65625</td>
+</tr>
+<tr>
+<th>5</th>
+<td>1006</td>
+<td>Caova</td>
+<td>97701</td>
+</tr>
+<tr>
+<th>6</th>
+<td>2397</td>
+<td>Quina</td>
+<td>60217</td>
+</tr>
+<tr>
+<th>7</th>
+<td>2013</td>
+<td>Quina</td>
+<td>22792</td>
+</tr>
+<tr>
+<th>8</th>
+<td>2165</td>
+<td>Caova</td>
+<td>36953</td>
+</tr>
+<tr>
+<th>9</th>
+<td>1527</td>
+<td>Guayaca</td>
+<td>97858</td>
+</tr>
+<tr>
+<th>10</th>
+<td>2481</td>
+<td>Laurel</td>
+<td>69711</td>
+</tr>
+<tr>
+<th>11</th>
+<td>1025</td>
+<td>Ceiba</td>
+<td>32194</td>
+</tr>
+<tr>
+<th>12</th>
+<td>687</td>
+<td>Ceiba</td>
+<td>38237</td>
+</tr>
+<tr>
+<th>13</th>
+<td>269</td>
+<td>Caova</td>
+<td>6085</td>
+</tr>
+<tr>
+<th>14</th>
+<td>2385</td>
+<td>Ceiba</td>
+<td>70349</td>
+</tr>
+<tr>
+<th>15</th>
+<td>1327</td>
+<td>Laurel</td>
+<td>97969</td>
+</tr>
+<tr>
+<th>16</th>
+<td>1276</td>
+<td>Laurel</td>
+<td>21000</td>
+</tr>
+<tr>
+<th>17</th>
+<td>1001</td>
+<td>Caova</td>
+<td>50380</td>
+</tr>
+<tr>
+<th>18</th>
+<td>2809</td>
+<td>Ceiba</td>
+<td>6262</td>
+</tr>
+<tr>
+<th>19</th>
+<td>248</td>
+<td>Caucho</td>
+<td>56407</td>
+</tr>
+<tr>
+<th>20</th>
+<td>124</td>
+<td>Caova</td>
+<td>86058</td>
+</tr>
+<tr>
+<th>21</th>
+<td>1639</td>
+<td>Laurel</td>
+<td>75321</td>
+</tr>
+<tr>
+<th>22</th>
+<td>2817</td>
+<td>Laurel</td>
+<td>24023</td>
+</tr>
+<tr>
+<th>23</th>
+<td>2823</td>
+<td>Caucho</td>
+<td>4594</td>
+</tr>
+<tr>
+<th>24</th>
+<td>1299</td>
+<td>Guayaca</td>
+<td>16028</td>
+</tr>
+<tr>
+<th>25</th>
+<td>1904</td>
+<td>Quina</td>
+<td>81359</td>
+</tr>
+<tr>
+<th>26</th>
+<td>1385</td>
+<td>Guayaca</td>
+<td>28026</td>
+</tr>
+<tr>
+<th>27</th>
+<td>879</td>
+<td>Quina</td>
+<td>58609</td>
+</tr>
+<tr>
+<th>28</th>
+<td>1276</td>
+<td>Caucho</td>
+<td>90975</td>
+</tr>
+<tr>
+<th>29</th>
+<td>673</td>
+<td>Quina</td>
+<td>59663</td>
+</tr>
+<tr>
+<th>30</th>
+<td>1358</td>
+<td>Ceiba</td>
+<td>80893</td>
+</tr>
+<tr>
+<th>31</th>
+<td>190</td>
+<td>Guayaca</td>
+<td>95327</td>
+</tr>
+<tr>
+<th>32</th>
+<td>341</td>
+<td>Laurel</td>
+<td>83996</td>
+</tr>
+<tr>
+<th>33</th>
+<td>1303</td>
+<td>Laurel</td>
+<td>13701</td>
+</tr>
+<tr>
+<th>34</th>
+<td>215</td>
+<td>Caova</td>
+<td>84086</td>
+</tr>
+<tr>
+<th>35</th>
+<td>2575</td>
+<td>Caucho</td>
+<td>57912</td>
+</tr>
+<tr>
+<th>36</th>
+<td>2009</td>
+<td>Ceiba</td>
+<td>83688</td>
+</tr>
+<tr>
+<th>37</th>
+<td>1187</td>
+<td>Caova</td>
+<td>82095</td>
+</tr>
+<tr>
+<th>38</th>
+<td>2723</td>
+<td>Quina</td>
+<td>99783</td>
+</tr>
+<tr>
+<th>39</th>
+<td>1338</td>
+<td>Laurel</td>
+<td>51566</td>
+</tr>
+<tr>
+<th>40</th>
+<td>73</td>
+<td>Laurel</td>
+<td>95247</td>
+</tr>
+<tr>
+<th>41</th>
+<td>1990</td>
+<td>Laurel</td>
+<td>83444</td>
+</tr>
+<tr>
+<th>42</th>
+<td>1749</td>
+<td>Caucho</td>
+<td>94011</td>
+</tr>
+<tr>
+<th>43</th>
+<td>1837</td>
+<td>Guayaca</td>
+<td>59097</td>
+</tr>
+<tr>
+<th>44</th>
+<td>235</td>
+<td>Ceiba</td>
+<td>93856</td>
+</tr>
+<tr>
+<th>45</th>
+<td>2989</td>
+<td>Caucho</td>
+<td>30978</td>
+</tr>
+<tr>
+<th>46</th>
+<td>34</td>
+<td>Quina</td>
+<td>25001</td>
+</tr>
+<tr>
+<th>47</th>
+<td>1895</td>
+<td>Laurel</td>
+<td>9314</td>
+</tr>
+<tr>
+<th>48</th>
+<td>1330</td>
+<td>Caucho</td>
+<td>44032</td>
+</tr>
+<tr>
+<th>49</th>
+<td>1409</td>
+<td>Laurel</td>
+<td>74380</td>
+</tr>
+</tbody>
+</table>
+ 
 
-										</tr>
-										<tr>
-											<td>4</td>
-											<td class="productimgname">
-												<a class="product-img" href="productlist.html">
-													<img src="assets/img/product/product5.jpg" alt="product">
-												</a>
-												<a href="productlist.html">Avocat</a>
-											</td>
-											<td>N/D</td>
-
-										</tr>
-									</tbody>
-								</table>
-							</div>
+             		</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- /Main Wrapper -->
-		
-		<!-- jQuery -->
+ 
+
+             		<!-- jQuery -->
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
 
 		<!-- Feather Icon JS -->
@@ -210,5 +476,9 @@
 		<!-- Custom JS -->
 		<script src="assets/js/script.js"></script>
 		
-	</body>
+  
+        
+</body>
 </html>
+  
+        
